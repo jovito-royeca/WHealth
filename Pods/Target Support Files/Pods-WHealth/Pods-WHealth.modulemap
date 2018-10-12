@@ -1,0 +1,6 @@
+framework module Pods_WHealth {
+  umbrella header "Pods-WHealth-umbrella.h"
+
+  export *
+  module * { export * }
+}

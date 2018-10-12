@@ -14,6 +14,9 @@
 		11C2D1EB217135160040A598 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C2D1E9217135160040A598 /* LaunchScreen.storyboard */; };
 		11C2D1F6217135160040A598 /* WHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D1F5217135160040A598 /* WHealthTests.swift */; };
 		11C2D201217135160040A598 /* WHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D200217135160040A598 /* WHealthUITests.swift */; };
+		2FC2C87410784445E20BE0A4 /* Pods_WHealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B3FA68A8E518E50B3B240D /* Pods_WHealth.framework */; };
+		94E22C18DB9B886D348D2FB0 /* Pods_WHealthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37808E85AADFA677FBD9B74B /* Pods_WHealthUITests.framework */; };
+		9DA36B8C7D191EF7E2311F2A /* Pods_WHealthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8394143553C30BADECECEBE /* Pods_WHealthTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,15 @@
 		11C2D1FC217135160040A598 /* WHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C2D200217135160040A598 /* WHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHealthUITests.swift; sourceTree = "<group>"; };
 		11C2D202217135160040A598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32B3FA68A8E518E50B3B240D /* Pods_WHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		330DC8A22F0CF950841822AC /* Pods-WHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHealth.release.xcconfig"; path = "Pods/Target Support Files/Pods-WHealth/Pods-WHealth.release.xcconfig"; sourceTree = "<group>"; };
+		37808E85AADFA677FBD9B74B /* Pods_WHealthUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WHealthUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D4BA80E0770E4375EA530C4 /* Pods-WHealthUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHealthUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WHealthUITests/Pods-WHealthUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B0AFDDAFCE365C58B10EBA9D /* Pods-WHealth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHealth.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WHealth/Pods-WHealth.debug.xcconfig"; sourceTree = "<group>"; };
+		B8394143553C30BADECECEBE /* Pods_WHealthTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WHealthTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D996BF32B23539F74694BC6B /* Pods-WHealthTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHealthTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WHealthTests/Pods-WHealthTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D9A2893C98B904B77C09267D /* Pods-WHealthTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHealthTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WHealthTests/Pods-WHealthTests.release.xcconfig"; sourceTree = "<group>"; };
+		F20814CB347A9C03D9030BDD /* Pods-WHealthUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHealthUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WHealthUITests/Pods-WHealthUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FC2C87410784445E20BE0A4 /* Pods_WHealth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DA36B8C7D191EF7E2311F2A /* Pods_WHealthTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E22C18DB9B886D348D2FB0 /* Pods_WHealthUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0596D2B9067D95020A2EC301 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0AFDDAFCE365C58B10EBA9D /* Pods-WHealth.debug.xcconfig */,
+				330DC8A22F0CF950841822AC /* Pods-WHealth.release.xcconfig */,
+				D996BF32B23539F74694BC6B /* Pods-WHealthTests.debug.xcconfig */,
+				D9A2893C98B904B77C09267D /* Pods-WHealthTests.release.xcconfig */,
+				9D4BA80E0770E4375EA530C4 /* Pods-WHealthUITests.debug.xcconfig */,
+				F20814CB347A9C03D9030BDD /* Pods-WHealthUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		11C2D1D4217135160040A598 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +109,8 @@
 				11C2D1F4217135160040A598 /* WHealthTests */,
 				11C2D1FF217135160040A598 /* WHealthUITests */,
 				11C2D1DE217135160040A598 /* Products */,
+				0596D2B9067D95020A2EC301 /* Pods */,
+				F040C50204B88BD7EB139A7B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +155,16 @@
 			path = WHealthUITests;
 			sourceTree = "<group>";
 		};
+		F040C50204B88BD7EB139A7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32B3FA68A8E518E50B3B240D /* Pods_WHealth.framework */,
+				B8394143553C30BADECECEBE /* Pods_WHealthTests.framework */,
+				37808E85AADFA677FBD9B74B /* Pods_WHealthUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11C2D205217135160040A598 /* Build configuration list for PBXNativeTarget "WHealth" */;
 			buildPhases = (
+				B4DEE755260F7E8944629BFB /* [CP] Check Pods Manifest.lock */,
 				11C2D1D9217135160040A598 /* Sources */,
 				11C2D1DA217135160040A598 /* Frameworks */,
 				11C2D1DB217135160040A598 /* Resources */,
+				4A065E0005630DA527EF83D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +191,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11C2D208217135160040A598 /* Build configuration list for PBXNativeTarget "WHealthTests" */;
 			buildPhases = (
+				B19D7226B6BE8C96399A38D2 /* [CP] Check Pods Manifest.lock */,
 				11C2D1ED217135160040A598 /* Sources */,
 				11C2D1EE217135160040A598 /* Frameworks */,
 				11C2D1EF217135160040A598 /* Resources */,
@@ -167,6 +210,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 11C2D20B217135160040A598 /* Build configuration list for PBXNativeTarget "WHealthUITests" */;
 			buildPhases = (
+				C77A3B9392C1019978AA7A8A /* [CP] Check Pods Manifest.lock */,
 				11C2D1F8217135160040A598 /* Sources */,
 				11C2D1F9217135160040A598 /* Frameworks */,
 				11C2D1FA217135160040A598 /* Resources */,
@@ -250,6 +294,83 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A065E0005630DA527EF83D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WHealth/Pods-WHealth-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Sync/Sync.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sync.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WHealth/Pods-WHealth-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B19D7226B6BE8C96399A38D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WHealthTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4DEE755260F7E8944629BFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WHealth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C77A3B9392C1019978AA7A8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WHealthUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		11C2D1D9217135160040A598 /* Sources */ = {
@@ -430,14 +551,12 @@
 		};
 		11C2D206217135160040A598 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0AFDDAFCE365C58B10EBA9D /* Pods-WHealth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WHealth/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jovitoroyeca.wexner.WHealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -447,14 +566,12 @@
 		};
 		11C2D207217135160040A598 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 330DC8A22F0CF950841822AC /* Pods-WHealth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WHealth/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jovitoroyeca.wexner.WHealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -464,16 +581,13 @@
 		};
 		11C2D209217135160040A598 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D996BF32B23539F74694BC6B /* Pods-WHealthTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WHealthTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jovitoroyeca.wexner.WHealthTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -484,16 +598,13 @@
 		};
 		11C2D20A217135160040A598 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9A2893C98B904B77C09267D /* Pods-WHealthTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WHealthTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jovitoroyeca.wexner.WHealthTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -504,15 +615,12 @@
 		};
 		11C2D20C217135160040A598 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D4BA80E0770E4375EA530C4 /* Pods-WHealthUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WHealthUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jovitoroyeca.wexner.WHealthUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -523,15 +631,12 @@
 		};
 		11C2D20D217135160040A598 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F20814CB347A9C03D9030BDD /* Pods-WHealthUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WHealthUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jovitoroyeca.wexner.WHealthUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
