@@ -14,6 +14,27 @@
 		11C2D1EB217135160040A598 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C2D1E9217135160040A598 /* LaunchScreen.storyboard */; };
 		11C2D1F6217135160040A598 /* WHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D1F5217135160040A598 /* WHealthTests.swift */; };
 		11C2D201217135160040A598 /* WHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D200217135160040A598 /* WHealthUITests.swift */; };
+		11C2D20F217135DB0040A598 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 11C2D20E217135DB0040A598 /* data */; };
+		11C2D210217135DB0040A598 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 11C2D20E217135DB0040A598 /* data */; };
+		11C2D211217135DB0040A598 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 11C2D20E217135DB0040A598 /* data */; };
+		11C2D214217143BB0040A598 /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D213217143BB0040A598 /* TopicsViewController.swift */; };
+		11C2D215217143BB0040A598 /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D213217143BB0040A598 /* TopicsViewController.swift */; };
+		11C2D216217143BB0040A598 /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D213217143BB0040A598 /* TopicsViewController.swift */; };
+		11C2D219217143D80040A598 /* TopicsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D218217143D80040A598 /* TopicsViewModel.swift */; };
+		11C2D21A217143D80040A598 /* TopicsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D218217143D80040A598 /* TopicsViewModel.swift */; };
+		11C2D21B217143D80040A598 /* TopicsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D218217143D80040A598 /* TopicsViewModel.swift */; };
+		11C2D21F217167220040A598 /* WHealth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D21D217167220040A598 /* WHealth.xcdatamodeld */; };
+		11C2D220217167220040A598 /* WHealth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D21D217167220040A598 /* WHealth.xcdatamodeld */; };
+		11C2D221217167220040A598 /* WHealth.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D21D217167220040A598 /* WHealth.xcdatamodeld */; };
+		11C2D224217170F30040A598 /* Topic+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D222217170F30040A598 /* Topic+CoreDataClass.swift */; };
+		11C2D225217170F30040A598 /* Topic+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D222217170F30040A598 /* Topic+CoreDataClass.swift */; };
+		11C2D226217170F30040A598 /* Topic+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D222217170F30040A598 /* Topic+CoreDataClass.swift */; };
+		11C2D227217170F30040A598 /* Topic+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D223217170F30040A598 /* Topic+CoreDataProperties.swift */; };
+		11C2D228217170F30040A598 /* Topic+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D223217170F30040A598 /* Topic+CoreDataProperties.swift */; };
+		11C2D229217170F30040A598 /* Topic+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D223217170F30040A598 /* Topic+CoreDataProperties.swift */; };
+		11C2D22B217171450040A598 /* CoreDataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D22A217171450040A598 /* CoreDataAPI.swift */; };
+		11C2D22C217171450040A598 /* CoreDataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D22A217171450040A598 /* CoreDataAPI.swift */; };
+		11C2D22D217171450040A598 /* CoreDataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D22A217171450040A598 /* CoreDataAPI.swift */; };
 		2FC2C87410784445E20BE0A4 /* Pods_WHealth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32B3FA68A8E518E50B3B240D /* Pods_WHealth.framework */; };
 		94E22C18DB9B886D348D2FB0 /* Pods_WHealthUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37808E85AADFA677FBD9B74B /* Pods_WHealthUITests.framework */; };
 		9DA36B8C7D191EF7E2311F2A /* Pods_WHealthTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8394143553C30BADECECEBE /* Pods_WHealthTests.framework */; };
@@ -50,6 +71,13 @@
 		11C2D1FC217135160040A598 /* WHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C2D200217135160040A598 /* WHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WHealthUITests.swift; sourceTree = "<group>"; };
 		11C2D202217135160040A598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11C2D20E217135DB0040A598 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = "<group>"; };
+		11C2D213217143BB0040A598 /* TopicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
+		11C2D218217143D80040A598 /* TopicsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsViewModel.swift; sourceTree = "<group>"; };
+		11C2D21E217167220040A598 /* WHealth.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WHealth.xcdatamodel; sourceTree = "<group>"; };
+		11C2D222217170F30040A598 /* Topic+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Topic+CoreDataClass.swift"; sourceTree = "<group>"; };
+		11C2D223217170F30040A598 /* Topic+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Topic+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		11C2D22A217171450040A598 /* CoreDataAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataAPI.swift; sourceTree = "<group>"; };
 		32B3FA68A8E518E50B3B240D /* Pods_WHealth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WHealth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		330DC8A22F0CF950841822AC /* Pods-WHealth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WHealth.release.xcconfig"; path = "Pods/Target Support Files/Pods-WHealth/Pods-WHealth.release.xcconfig"; sourceTree = "<group>"; };
 		37808E85AADFA677FBD9B74B /* Pods_WHealthUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WHealthUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +155,10 @@
 		11C2D1DF217135160040A598 /* WHealth */ = {
 			isa = PBXGroup;
 			children = (
+				11C2D212217143A00040A598 /* Topics */,
+				11C2D21C217166E50040A598 /* Model */,
+				11C2D217217143C00040A598 /* API */,
+				11C2D20E217135DB0040A598 /* data */,
 				11C2D1E0217135160040A598 /* AppDelegate.swift */,
 				11C2D1E2217135160040A598 /* ViewController.swift */,
 				11C2D1E4217135160040A598 /* Main.storyboard */,
@@ -153,6 +185,33 @@
 				11C2D202217135160040A598 /* Info.plist */,
 			);
 			path = WHealthUITests;
+			sourceTree = "<group>";
+		};
+		11C2D212217143A00040A598 /* Topics */ = {
+			isa = PBXGroup;
+			children = (
+				11C2D213217143BB0040A598 /* TopicsViewController.swift */,
+				11C2D218217143D80040A598 /* TopicsViewModel.swift */,
+			);
+			path = Topics;
+			sourceTree = "<group>";
+		};
+		11C2D217217143C00040A598 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				11C2D22A217171450040A598 /* CoreDataAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		11C2D21C217166E50040A598 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11C2D222217170F30040A598 /* Topic+CoreDataClass.swift */,
+				11C2D223217170F30040A598 /* Topic+CoreDataProperties.swift */,
+				11C2D21D217167220040A598 /* WHealth.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		F040C50204B88BD7EB139A7B /* Frameworks */ = {
@@ -275,6 +334,7 @@
 			files = (
 				11C2D1EB217135160040A598 /* LaunchScreen.storyboard in Resources */,
 				11C2D1E8217135160040A598 /* Assets.xcassets in Resources */,
+				11C2D20F217135DB0040A598 /* data in Resources */,
 				11C2D1E6217135160040A598 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C2D210217135DB0040A598 /* data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C2D211217135DB0040A598 /* data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +440,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				11C2D1E3217135160040A598 /* ViewController.swift in Sources */,
+				11C2D22B217171450040A598 /* CoreDataAPI.swift in Sources */,
+				11C2D227217170F30040A598 /* Topic+CoreDataProperties.swift in Sources */,
 				11C2D1E1217135160040A598 /* AppDelegate.swift in Sources */,
+				11C2D219217143D80040A598 /* TopicsViewModel.swift in Sources */,
+				11C2D224217170F30040A598 /* Topic+CoreDataClass.swift in Sources */,
+				11C2D214217143BB0040A598 /* TopicsViewController.swift in Sources */,
+				11C2D21F217167220040A598 /* WHealth.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +454,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C2D215217143BB0040A598 /* TopicsViewController.swift in Sources */,
+				11C2D220217167220040A598 /* WHealth.xcdatamodeld in Sources */,
 				11C2D1F6217135160040A598 /* WHealthTests.swift in Sources */,
+				11C2D22C217171450040A598 /* CoreDataAPI.swift in Sources */,
+				11C2D228217170F30040A598 /* Topic+CoreDataProperties.swift in Sources */,
+				11C2D21A217143D80040A598 /* TopicsViewModel.swift in Sources */,
+				11C2D225217170F30040A598 /* Topic+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +468,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11C2D216217143BB0040A598 /* TopicsViewController.swift in Sources */,
+				11C2D221217167220040A598 /* WHealth.xcdatamodeld in Sources */,
 				11C2D201217135160040A598 /* WHealthUITests.swift in Sources */,
+				11C2D22D217171450040A598 /* CoreDataAPI.swift in Sources */,
+				11C2D229217170F30040A598 /* Topic+CoreDataProperties.swift in Sources */,
+				11C2D21B217143D80040A598 /* TopicsViewModel.swift in Sources */,
+				11C2D226217170F30040A598 /* Topic+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +636,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WHealth/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jovitoroyeca.wexner.WHealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -571,7 +654,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WHealth/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jovitoroyeca.wexner.WHealth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -587,7 +673,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WHealthTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jovitoroyeca.wexner.WHealthTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -604,7 +694,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WHealthTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jovitoroyeca.wexner.WHealthTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -620,7 +714,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WHealthUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jovitoroyeca.wexner.WHealthUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -636,7 +734,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = WHealthUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jovitoroyeca.wexner.WHealthUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -685,6 +787,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		11C2D21D217167220040A598 /* WHealth.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				11C2D21E217167220040A598 /* WHealth.xcdatamodel */,
+			);
+			currentVersion = 11C2D21E217167220040A598 /* WHealth.xcdatamodel */;
+			path = WHealth.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 11C2D1D5217135160040A598 /* Project object */;
 }

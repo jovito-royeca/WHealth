@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Topic" representedClassName="Topic" syncable="YES">
+        <attribute name="aggregateCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="hyper.isPrimaryKey" value="true"/>
+                <entry key="sync.isPrimaryKey" value="true"/>
+                <entry key="sync.remoteKey" value="Name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="style" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="sync.remoteKey" value="Style"/>
+            </userInfo>
+        </attribute>
+        <userInfo>
+            <entry key="sync.remoteKey" value="AggregateCount"/>
+        </userInfo>
+    </entity>
+    <elements>
+        <element name="Topic" positionX="-63" positionY="-18" width="128" height="90"/>
+    </elements>
+</model>
