@@ -88,9 +88,18 @@ class TopicsViewModel: NSObject {
     
     func fetchData() {
         let request: NSFetchRequest<Topic> = Topic.fetchRequest()
+        let count = queryString.count
         
+        if count > 0 {
+            if count == 1 {
+                request.predicate = NSPredicate(format: "name BEGINSWITH[cd] %@", queryString, queryString)
+            } else {
+                request.predicate = NSPredicate(format: "name CONTAINS[cd] %@", queryString, queryString)
+            }
+        }
         request.sortDescriptors = _sortDescriptors
         _fetchedResultsController = getFetchedResultsController(with: request)
+        
         updateSections()
     }
     

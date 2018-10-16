@@ -12,6 +12,7 @@ import PromiseKit
 
 class TopicsViewController: UIViewController {
     // MARK: Variables
+    let searchController = UISearchController(searchResultsController: nil)
     let viewModel = TopicsViewModel()
     
     // MARK: Outlets
@@ -22,6 +23,20 @@ class TopicsViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.delegate = self
+        searchController.searchBar.placeholder = "Search"
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        
+        if #available(iOS 11.0, *) {
+            navigationItem.searchController = searchController
+            navigationItem.hidesSearchBarWhenScrolling = false
+        } else {
+            tableView.tableHeaderView = searchController.searchBar
+        }
+        tableView.keyboardDismissMode = .onDrag
+        
         viewModel.fetchData()
     }
     
@@ -80,6 +95,12 @@ class TopicsViewController: UIViewController {
             }
         }
     }
+    
+    @objc func doSearch() {
+        viewModel.queryString = searchController.searchBar.text ?? ""
+        viewModel.fetchData()
+        tableView.reloadData()
+    }
 }
 
 // MARK: UITableViewDataSource
@@ -125,4 +146,32 @@ extension TopicsViewController : UITableViewDelegate {
         performSegue(withIdentifier: "showTopicDetails", sender: topic)
     }
 }
+
+// MARK: UISearchResultsUpdating
+extension TopicsViewController : UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(doSearch), object: nil)
+        perform(#selector(doSearch), with: nil, afterDelay: 0.5)
+    }
+}
+
+// MARK: UISearchResultsUpdating
+extension TopicsViewController : UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        viewModel.searchCancelled = false
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        viewModel.searchCancelled = true
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        if viewModel.searchCancelled {
+            searchBar.text = viewModel.queryString
+        } else {
+            viewModel.queryString = searchBar.text ?? ""
+        }
+    }
+}
+
 
