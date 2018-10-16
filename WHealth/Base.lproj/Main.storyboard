@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="3208.8000000000002" y="-322.48875562218893"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="YJx-F0-14O">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vEN-3G-afe" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vEN-3G-afe" customClass="MainViewController" customModule="WHealth" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VB3-YY-SIB">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -142,7 +142,7 @@
             </objects>
             <point key="canvasLocation" x="-860" y="1056"/>
         </scene>
-        <!--View Controller-->
+        <!--My Charts-->
         <scene sceneID="Qxn-DO-PZo">
             <objects>
                 <viewController id="HBA-DT-iag" sceneMemberID="viewController">
@@ -152,13 +152,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PQa-ct-diU"/>
                     </view>
-                    <navigationItem key="navigationItem" id="9Cb-xI-VeJ"/>
+                    <navigationItem key="navigationItem" title="My Charts" id="9Cb-xI-VeJ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="6xJ-pz-EFL"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GOd-4t-c9k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2024.8" y="365.66716641679164"/>
         </scene>
-        <!--View Controller-->
+        <!--Find A Doctor-->
         <scene sceneID="WA5-Bz-W4l">
             <objects>
                 <viewController id="evK-9Z-1L3" sceneMemberID="viewController">
@@ -168,13 +170,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iHs-0t-heU"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Vkc-D3-7NJ"/>
+                    <navigationItem key="navigationItem" title="Find A Doctor" id="Vkc-D3-7NJ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="n6D-KJ-EO0"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sTV-T5-Z5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2024.8" y="1055.6221889055473"/>
         </scene>
-        <!--View Controller-->
+        <!--Locations-->
         <scene sceneID="Ok3-5r-ipd">
             <objects>
                 <viewController id="1WP-Js-JC3" sceneMemberID="viewController">
@@ -184,13 +188,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8nu-QT-sOl"/>
                     </view>
-                    <navigationItem key="navigationItem" id="822-vV-Lm4"/>
+                    <navigationItem key="navigationItem" title="Locations" id="822-vV-Lm4">
+                        <barButtonItem key="backBarButtonItem" title=" " id="6Ap-eK-48x"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Zv-Z6-uqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2024.8" y="1754.5727136431785"/>
         </scene>
-        <!--View Controller-->
+        <!--More-->
         <scene sceneID="23q-nI-QSF">
             <objects>
                 <viewController id="NNv-AP-Oih" sceneMemberID="viewController">
@@ -200,7 +206,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="jiD-5P-Oo4"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1WL-fU-K1h"/>
+                    <navigationItem key="navigationItem" title="More" id="1WL-fU-K1h">
+                        <barButtonItem key="backBarButtonItem" title=" " id="py0-hf-6pF"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tfh-MK-me2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

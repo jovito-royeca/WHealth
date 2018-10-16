@@ -9,6 +9,7 @@
                 <entry key="sync.remoteKey" value="Name"/>
             </userInfo>
         </attribute>
+        <attribute name="nameSection" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="style" optional="YES" attributeType="String" syncable="YES">
             <userInfo>
                 <entry key="sync.remoteKey" value="Style"/>
@@ -19,6 +20,6 @@
         </userInfo>
     </entity>
     <elements>
-        <element name="Topic" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Topic" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>

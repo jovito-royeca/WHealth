@@ -18,7 +18,9 @@ extension Topic {
     }
 
     @NSManaged public var name: String?
+    @NSManaged public var nameSection: String?
     @NSManaged public var aggregateCount: Int32
     @NSManaged public var style: String?
 
+    
 }

@@ -100,6 +100,18 @@ extension TopicsViewController : UITableViewDataSource {
         cell.textLabel?.text = topic.name
         return cell
     }
+    
+    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return viewModel.sectionIndexTitles()
+    }
+    
+    func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+        return viewModel.sectionForSectionIndexTitle(title: title, at: index)
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return viewModel.titleForHeaderInSection(section: section)
+    }
 }
 
 // MARK: UITableViewDelegate

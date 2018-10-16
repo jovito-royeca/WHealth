@@ -61,13 +61,36 @@ class CoreDataAPI: NSObject {
     func save(_ topics: [[String: Any]]) -> Promise<Void> {
         return Promise { seal  in
             let notifName = NSNotification.Name.NSManagedObjectContextObjectsDidChange
+            var modTopics = [[String: Any]]()
+            
+            // add nameSection as the initial letter
+            let letters = CharacterSet.letters
+            for topic in topics {
+                var t = [String: Any]()
+                
+                for (k,v) in topic {
+                    t[k] = v
+                    
+                    if k == "Name" {
+                        if let vName = v as? String {
+                            var prefix = String(vName.prefix(1))
+                            if prefix.rangeOfCharacter(from: letters) == nil {
+                                prefix = "#"
+                            }
+                            t["nameSection"] = prefix.uppercased().folding(options: .diacriticInsensitive, locale: .current)
+                        }
+                    }
+                }
+                
+                modTopics.append(t)
+            }
             
             let completion = {(backgroundContext: NSManagedObjectContext) in
                 NotificationCenter.default.addObserver(self,
                                                        selector: #selector(self.changeNotification(_:)),
                                                        name: notifName,
                                                        object: backgroundContext)
-                Sync.changes(topics,
+                Sync.changes(modTopics,
                              inEntityNamed: "Topic",
                              predicate: nil,
                              parent: nil,

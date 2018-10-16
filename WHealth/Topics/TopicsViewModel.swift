@@ -10,7 +10,12 @@ import CoreData
 import PromiseKit
 
 class TopicsViewModel: NSObject {
-    // MARK: Private variables
+    // MARK: variables
+    var queryString = ""
+    var searchCancelled = false
+    
+    private var _sectionIndexTitles = [String]()
+    private var _sectionTitles = [String]()
     private var _fetchedResultsController: NSFetchedResultsController<Topic>?
     private var _sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
     
@@ -31,6 +36,32 @@ class TopicsViewModel: NSObject {
         }
         
         return sections.count
+    }
+    
+    func sectionIndexTitles() -> [String]? {
+        return _sectionIndexTitles
+    }
+    
+    func sectionForSectionIndexTitle(title: String, at index: Int) -> Int {
+        var sectionIndex = 0
+        
+        for i in 0..._sectionTitles.count - 1 {
+            if _sectionTitles[i].hasPrefix(title) {
+                sectionIndex = i
+                break
+            }
+        }
+        
+        return sectionIndex
+    }
+    
+    func titleForHeaderInSection(section: Int) -> String? {
+        guard let fetchedResultsController = _fetchedResultsController,
+            let sections = fetchedResultsController.sections else {
+                return nil
+        }
+        
+        return sections[section].name
     }
     
     // MARK: Custom methods
@@ -60,6 +91,7 @@ class TopicsViewModel: NSObject {
         
         request.sortDescriptors = _sortDescriptors
         _fetchedResultsController = getFetchedResultsController(with: request)
+        updateSections()
     }
     
     // MARK: Private methods
@@ -78,7 +110,7 @@ class TopicsViewModel: NSObject {
         // Create Fetched Results Controller
         let frc = NSFetchedResultsController(fetchRequest: request!,
                                              managedObjectContext: context,
-                                             sectionNameKeyPath: nil,
+                                             sectionNameKeyPath: "nameSection",
                                              cacheName: nil)
         
         // Configure Fetched Results Controller
@@ -94,6 +126,37 @@ class TopicsViewModel: NSObject {
         }
         
         return frc
+    }
+    
+    private func updateSections() {
+        guard let fetchedResultsController = _fetchedResultsController,
+            let topics = fetchedResultsController.fetchedObjects,
+            let sections = fetchedResultsController.sections else {
+                return
+        }
+        
+        _sectionIndexTitles = [String]()
+        _sectionTitles = [String]()
+        
+        for topic in topics {
+            if let nameSection = topic.nameSection {
+                if !_sectionIndexTitles.contains(nameSection) {
+                    _sectionIndexTitles.append(nameSection)
+                }
+            }
+        }
+        
+        let count = sections.count
+        if count > 0 {
+            for i in 0...count - 1 {
+                if let sectionTitle = sections[i].indexTitle {
+                    _sectionTitles.append(sectionTitle)
+                }
+            }
+        }
+        
+        _sectionIndexTitles.sort()
+        _sectionTitles.sort()
     }
 }
 
