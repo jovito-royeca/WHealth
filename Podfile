@@ -7,6 +7,7 @@ target 'WHealth' do
 
   # Pods for WHealth 
   pod 'MBProgressHUD'
+  pod 'PromiseKit'
   pod 'Sync'
 
   target 'WHealthTests' do

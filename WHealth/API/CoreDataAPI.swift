@@ -7,10 +7,11 @@
 //
 
 import Sync
+import PromiseKit
 
-enum Notifications {
-    static let JSON2CoreDataDone = "JSON2CoreDataDone"
-}
+//enum Notifications {
+//    static let JSON2CoreDataDone = "JSON2CoreDataDone"
+//}
 
 /*
  * Singleton class to handle Core Data operations
@@ -57,56 +58,34 @@ class CoreDataAPI: NSObject {
         }
     }
     
-    /*
-     * Read JSON data
-     */
-    func loadData() -> [[String: Any]]? {
-        guard let path = Bundle.main.path(forResource: "topics",
-                                          ofType: "json",
-                                          inDirectory: "data"),
-            FileManager.default.fileExists(atPath: path) else {
-                return nil
-        }
-        
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path))
-        
-        guard let array = try! JSONSerialization.jsonObject(with: data,
-                                                            options: .allowFragments) as? [[String: Any]] else {
-            return nil
-        }
-        
-        return array
-    }
-    
-    /*
-     * Load JSON data to database
-     */
-    func json2CoreData() {
-        guard let array = loadData() else {
-            return
-        }
-        
-        let notifName = NSNotification.Name.NSManagedObjectContextObjectsDidChange
-        
-        dataStack?.performInNewBackgroundContext { backgroundContext in
-            NotificationCenter.default.addObserver(self,
-                                                   selector: #selector(self.changeNotification(_:)),
-                                                   name: notifName,
-                                                   object: backgroundContext)
+    func save(_ topics: [[String: Any]]) -> Promise<Void> {
+        return Promise { seal  in
+            let notifName = NSNotification.Name.NSManagedObjectContextObjectsDidChange
             
-            Sync.changes(array,
-                         inEntityNamed: "Topic",
-                         predicate: nil,
-                         parent: nil,
-                         parentRelationship: nil,
-                         inContext: backgroundContext,
-                         operations: .all,
-                         completion:  { error in
-                            NotificationCenter.default.removeObserver(self, name:notifName,
-                                                                      object: nil)
-                            NotificationCenter.default.post(name: Notification.Name(Notifications.JSON2CoreDataDone),
-                                                            object: nil)
-            })
+            let completion = {(backgroundContext: NSManagedObjectContext) in
+                NotificationCenter.default.addObserver(self,
+                                                       selector: #selector(self.changeNotification(_:)),
+                                                       name: notifName,
+                                                       object: backgroundContext)
+                Sync.changes(topics,
+                             inEntityNamed: "Topic",
+                             predicate: nil,
+                             parent: nil,
+                             parentRelationship: nil,
+                             inContext: backgroundContext,
+                             operations: .all,
+                             completion:  { error in
+                                NotificationCenter.default.removeObserver(self, name:notifName,
+                                                                          object: nil)
+                                if let error = error {
+                                    seal.reject(error)
+                                } else {
+                                    seal.fulfill(())
+                                }
+                            })
+            }
+            
+            self.dataStack?.performInNewBackgroundContext(completion)
         }
     }
     

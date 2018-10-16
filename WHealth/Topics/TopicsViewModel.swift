@@ -7,6 +7,7 @@
 //
 
 import CoreData
+import PromiseKit
 
 class TopicsViewModel: NSObject {
     // MARK: Private variables
@@ -60,8 +61,6 @@ class TopicsViewModel: NSObject {
         request.sortDescriptors = _sortDescriptors
         _fetchedResultsController = getFetchedResultsController(with: request)
     }
-    
-    
     
     // MARK: Private methods
     private func getFetchedResultsController(with fetchRequest: NSFetchRequest<Topic>?) -> NSFetchedResultsController<Topic> {

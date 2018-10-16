@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		114A84502175930A00B7D7C0 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A844F2175930A00B7D7C0 /* TopicViewController.swift */; };
+		114A84512175930A00B7D7C0 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A844F2175930A00B7D7C0 /* TopicViewController.swift */; };
+		114A84522175930A00B7D7C0 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A844F2175930A00B7D7C0 /* TopicViewController.swift */; };
+		114A845421759F2D00B7D7C0 /* WebServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A845321759F2D00B7D7C0 /* WebServiceAPI.swift */; };
+		114A845521759F2D00B7D7C0 /* WebServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A845321759F2D00B7D7C0 /* WebServiceAPI.swift */; };
+		114A845621759F2D00B7D7C0 /* WebServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A845321759F2D00B7D7C0 /* WebServiceAPI.swift */; };
+		114A84582175C42D00B7D7C0 /* TopicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A84572175C42D00B7D7C0 /* TopicViewModel.swift */; };
+		114A84592175C42D00B7D7C0 /* TopicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A84572175C42D00B7D7C0 /* TopicViewModel.swift */; };
+		114A845A2175C42D00B7D7C0 /* TopicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114A84572175C42D00B7D7C0 /* TopicViewModel.swift */; };
 		11C2D1E1217135160040A598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D1E0217135160040A598 /* AppDelegate.swift */; };
 		11C2D1E3217135160040A598 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C2D1E2217135160040A598 /* ViewController.swift */; };
 		11C2D1E6217135160040A598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11C2D1E4217135160040A598 /* Main.storyboard */; };
@@ -58,6 +67,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		114A844F2175930A00B7D7C0 /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
+		114A845321759F2D00B7D7C0 /* WebServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceAPI.swift; sourceTree = "<group>"; };
+		114A84572175C42D00B7D7C0 /* TopicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewModel.swift; sourceTree = "<group>"; };
 		11C2D1DD217135160040A598 /* WHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11C2D1E0217135160040A598 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11C2D1E2217135160040A598 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +142,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		114A844E217592D300B7D7C0 /* Topic */ = {
+			isa = PBXGroup;
+			children = (
+				114A844F2175930A00B7D7C0 /* TopicViewController.swift */,
+				114A84572175C42D00B7D7C0 /* TopicViewModel.swift */,
+			);
+			path = Topic;
+			sourceTree = "<group>";
+		};
 		11C2D1D4217135160040A598 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				11C2D212217143A00040A598 /* Topics */,
+				114A844E217592D300B7D7C0 /* Topic */,
 				11C2D21C217166E50040A598 /* Model */,
 				11C2D217217143C00040A598 /* API */,
 				11C2D20E217135DB0040A598 /* data */,
@@ -200,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				11C2D22A217171450040A598 /* CoreDataAPI.swift */,
+				114A845321759F2D00B7D7C0 /* WebServiceAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -366,11 +389,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-WHealth/Pods-WHealth-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Sync/Sync.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Sync.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -444,9 +469,12 @@
 				11C2D227217170F30040A598 /* Topic+CoreDataProperties.swift in Sources */,
 				11C2D1E1217135160040A598 /* AppDelegate.swift in Sources */,
 				11C2D219217143D80040A598 /* TopicsViewModel.swift in Sources */,
+				114A845421759F2D00B7D7C0 /* WebServiceAPI.swift in Sources */,
 				11C2D224217170F30040A598 /* Topic+CoreDataClass.swift in Sources */,
+				114A84582175C42D00B7D7C0 /* TopicViewModel.swift in Sources */,
 				11C2D214217143BB0040A598 /* TopicsViewController.swift in Sources */,
 				11C2D21F217167220040A598 /* WHealth.xcdatamodeld in Sources */,
+				114A84502175930A00B7D7C0 /* TopicViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +484,9 @@
 			files = (
 				11C2D215217143BB0040A598 /* TopicsViewController.swift in Sources */,
 				11C2D220217167220040A598 /* WHealth.xcdatamodeld in Sources */,
+				114A845521759F2D00B7D7C0 /* WebServiceAPI.swift in Sources */,
+				114A84512175930A00B7D7C0 /* TopicViewController.swift in Sources */,
+				114A84592175C42D00B7D7C0 /* TopicViewModel.swift in Sources */,
 				11C2D1F6217135160040A598 /* WHealthTests.swift in Sources */,
 				11C2D22C217171450040A598 /* CoreDataAPI.swift in Sources */,
 				11C2D228217170F30040A598 /* Topic+CoreDataProperties.swift in Sources */,
@@ -470,6 +501,9 @@
 			files = (
 				11C2D216217143BB0040A598 /* TopicsViewController.swift in Sources */,
 				11C2D221217167220040A598 /* WHealth.xcdatamodeld in Sources */,
+				114A845621759F2D00B7D7C0 /* WebServiceAPI.swift in Sources */,
+				114A84522175930A00B7D7C0 /* TopicViewController.swift in Sources */,
+				114A845A2175C42D00B7D7C0 /* TopicViewModel.swift in Sources */,
 				11C2D201217135160040A598 /* WHealthUITests.swift in Sources */,
 				11C2D22D217171450040A598 /* CoreDataAPI.swift in Sources */,
 				11C2D229217170F30040A598 /* Topic+CoreDataProperties.swift in Sources */,

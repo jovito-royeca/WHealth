@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Topics View Controller-->
+        <!--Topics-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TopicsViewController" customModule="WHealth" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="gEi-T5-Dyh" detailTextLabel="LaZ-s8-xvG" style="IBUITableViewCellStyleSubtitle" id="x33-9B-IRz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="gEi-T5-Dyh" style="IBUITableViewCellStyleDefault" id="x33-9B-IRz">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x33-9B-IRz" id="3Pe-t8-2o1">
@@ -29,16 +29,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gEi-T5-Dyh">
-                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LaZ-s8-xvG">
-                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -61,14 +54,66 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Var-hK-g7l"/>
+                    <navigationItem key="navigationItem" title="Topics" id="Var-hK-g7l">
+                        <barButtonItem key="backBarButtonItem" title=" " id="qZe-Yj-g9Z"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="psn-Fd-B2b" id="Zfz-2Z-jWz"/>
+                        <segue destination="oPX-7A-Lo9" kind="show" identifier="showTopicDetails" id="hSH-J7-6ZV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2024.8" y="-322.48875562218893"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="gad-01-Mrp">
+            <objects>
+                <viewController id="oPX-7A-Lo9" customClass="TopicViewController" customModule="WHealth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r8S-c3-oXP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDR-fG-uC7">
+                                <rect key="frame" x="16" y="100" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aggregate Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nEn-Kw-yZ5">
+                                <rect key="frame" x="16" y="128.5" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Style" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="doz-yy-pgN">
+                                <rect key="frame" x="16" y="157.5" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="r5s-CM-45i" firstAttribute="trailing" secondItem="doz-yy-pgN" secondAttribute="trailing" constant="16" id="3FG-J2-RDY"/>
+                            <constraint firstItem="nEn-Kw-yZ5" firstAttribute="leading" secondItem="r5s-CM-45i" secondAttribute="leading" constant="16" id="E0x-4k-DpC"/>
+                            <constraint firstItem="doz-yy-pgN" firstAttribute="top" secondItem="nEn-Kw-yZ5" secondAttribute="bottom" constant="8" id="IIJ-3e-V0g"/>
+                            <constraint firstItem="r5s-CM-45i" firstAttribute="trailing" secondItem="aDR-fG-uC7" secondAttribute="trailing" constant="16" id="Jwo-ya-XnY"/>
+                            <constraint firstItem="aDR-fG-uC7" firstAttribute="leading" secondItem="r5s-CM-45i" secondAttribute="leading" constant="16" id="TiY-6D-eK0"/>
+                            <constraint firstItem="aDR-fG-uC7" firstAttribute="top" secondItem="r5s-CM-45i" secondAttribute="top" constant="36" id="X4o-U0-JTE"/>
+                            <constraint firstItem="nEn-Kw-yZ5" firstAttribute="top" secondItem="aDR-fG-uC7" secondAttribute="bottom" constant="8" id="fAw-KS-TrU"/>
+                            <constraint firstItem="doz-yy-pgN" firstAttribute="leading" secondItem="r5s-CM-45i" secondAttribute="leading" constant="16" id="gWf-wI-UIU"/>
+                            <constraint firstItem="r5s-CM-45i" firstAttribute="trailing" secondItem="nEn-Kw-yZ5" secondAttribute="trailing" constant="16" id="k2x-aE-SDB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="r5s-CM-45i"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details" id="GlI-tB-sH4">
+                        <barButtonItem key="backBarButtonItem" title=" " id="FFZ-rH-Byg"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g9k-CE-QB5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3208.8000000000002" y="-322.48875562218893"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="YJx-F0-14O">
@@ -76,6 +121,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="vEN-3G-afe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VB3-YY-SIB">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

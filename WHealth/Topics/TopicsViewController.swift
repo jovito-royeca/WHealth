@@ -8,6 +8,7 @@
 
 import UIKit
 import MBProgressHUD
+import PromiseKit
 
 class TopicsViewController: UIViewController {
     // MARK: Variables
@@ -28,36 +29,56 @@ class TopicsViewController: UIViewController {
         super.viewDidAppear(animated)
         
         if viewModel.isEmpty() {
-            NotificationCenter.default.addObserver(self,
-                                                   selector: #selector(self.json2CoreDataDone(_:)),
-                                                   name: Notification.Name(Notifications.JSON2CoreDataDone),
-                                                   object: nil)
-            MBProgressHUD.showAdded(to: self.view, animated: true)
-            CoreDataAPI.sharedInstance.json2CoreData()
+            loadRemoteData()
         }
     }
     
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "showDetails" {
-//            guard let dest = segue.destination as? DetailsViewController,
-//                let company = sender as? Company else {
-//                    return
-//            }
-//
+        if segue.identifier == "showTopicDetails" {
+            guard let dest = segue.destination as? TopicViewController,
+                let topic = sender as? Topic else {
+                    return
+            }
+
 //            dest.viewModel = DetailsViewModel(withCompany: company)
-//        }
+        }
     }
     
-    // MARK: Notifications handler
-    @objc func json2CoreDataDone(_ notification: Notification) {
-        viewModel.fetchData()
-        MBProgressHUD.hide(for: self.view, animated: true)
-        tableView.reloadData()
-        NotificationCenter.default.removeObserver(self,
-                                                  name: Notification.Name(Notifications.JSON2CoreDataDone),
-                                                  object: nil)
+    // MARK: Custom methods
+    func loadRemoteData() {
+        let webService = WebServiceAPI()
+        
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        firstly {
+            webService.fetchTopics()
+        }.then { (topics: [[String: Any]]) in
+            CoreDataAPI.sharedInstance.save(topics)
+        }.done {
+            self.viewModel.fetchData()
+            MBProgressHUD.hide(for: self.view, animated: true)
+            self.tableView.reloadData()
+        }.catch { error in
+            print("\(error)")
+            self.loadLocalData()
+        }
+    }
+    
+    func loadLocalData() {
+        let webService = WebServiceAPI()
+        
+        if let topics = webService.loadTopics() {
+            firstly {
+                CoreDataAPI.sharedInstance.save(topics)
+            }.done {
+                self.viewModel.fetchData()
+                MBProgressHUD.hide(for: self.view, animated: true)
+                self.tableView.reloadData()
+            }.catch { error in
+                print("\(error)")
+            }
+        }
     }
 }
 
@@ -89,7 +110,7 @@ extension TopicsViewController : UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let topic = viewModel.object(forRowAt: indexPath)
-        performSegue(withIdentifier: "showDetails", sender: topic)
+        performSegue(withIdentifier: "showTopicDetails", sender: topic)
     }
 }
 
