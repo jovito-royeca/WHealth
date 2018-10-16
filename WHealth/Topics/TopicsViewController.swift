@@ -72,8 +72,8 @@ class TopicsViewController: UIViewController {
             CoreDataAPI.sharedInstance.save(topics)
         }.done {
             self.viewModel.fetchData()
-            MBProgressHUD.hide(for: self.view, animated: true)
             self.tableView.reloadData()
+            MBProgressHUD.hide(for: self.view, animated: true)
         }.catch { error in
             print("\(error)")
             self.loadLocalData()
@@ -83,16 +83,17 @@ class TopicsViewController: UIViewController {
     func loadLocalData() {
         let webService = WebServiceAPI()
         
-        if let topics = webService.loadTopics() {
-            firstly {
-                CoreDataAPI.sharedInstance.save(topics)
-            }.done {
-                self.viewModel.fetchData()
-                MBProgressHUD.hide(for: self.view, animated: true)
-                self.tableView.reloadData()
-            }.catch { error in
-                print("\(error)")
-            }
+        firstly {
+            webService.loadTopics()
+        }.then { (topics: [[String: Any]]) in
+            CoreDataAPI.sharedInstance.save(topics)
+        }.done {
+            self.viewModel.fetchData()
+            self.tableView.reloadData()
+            MBProgressHUD.hide(for: self.view, animated: true)
+        }.catch { error in
+            print("\(error)")
+            MBProgressHUD.hide(for: self.view, animated: true)
         }
     }
     

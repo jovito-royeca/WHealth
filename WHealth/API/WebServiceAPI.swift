@@ -18,6 +18,9 @@ enum Error: Swift.Error {
     case badResponse(Int)
 }
 
+/*
+ * This class handles loading data from Web Service or local bundled JSON file.
+ */
 class WebServiceAPI: NSObject {
     /*
      * Load topics from WebService
@@ -47,21 +50,23 @@ class WebServiceAPI: NSObject {
     /*
      * Read the bundled JSON data.
      */
-    func loadTopics() -> [[String: Any]]? {
-        guard let path = Bundle.main.path(forResource: "topics",
-                                          ofType: "json",
-                                          inDirectory: "data"),
-            FileManager.default.fileExists(atPath: path) else {
-            return nil
+    func loadTopics()  -> Promise<[[String: Any]]> {
+        return Promise { seal  in
+            guard let path = Bundle.main.path(forResource: "topics",
+                                              ofType: "json",
+                                              inDirectory: "data"),
+                FileManager.default.fileExists(atPath: path) else {
+                return
+            }
+        
+            let data = try! Data(contentsOf: URL(fileURLWithPath: path))
+        
+            guard let json = try! JSONSerialization.jsonObject(with: data,
+                                                               options: .allowFragments) as? [[String: Any]] else {
+                return
+            }
+        
+            seal.fulfill(json)
         }
-        
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path))
-        
-        guard let array = try! JSONSerialization.jsonObject(with: data,
-                                                            options: .allowFragments) as? [[String: Any]] else {
-            return nil
-        }
-        
-        return array
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import PromiseKit
 @testable import WHealth
 
 class WHealthTests: XCTestCase {
@@ -30,5 +31,53 @@ class WHealthTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testLoadRemoteData() {
+        let expectation = self.expectation(description: "testLoadRemoteData")
+        let webService = WebServiceAPI()
+        
+        firstly {
+            webService.fetchTopics()
+        }.then { (topics: [[String: Any]]) in
+            CoreDataAPI.sharedInstance.save(topics)
+        }.done {
+            print("Done loading local data.")
+            expectation.fulfill()
+        }.catch { error in
+            print("\(error)")
+            XCTFail()
+        }
+        
+        self.waitForExpectations(timeout: 10.0, handler: nil)
+    }
+    
+    func testLoadLocalData() {
+        let expectation = self.expectation(description: "testLoadLocalData")
+        let webService = WebServiceAPI()
+        
+        firstly {
+            webService.loadTopics()
+        }.then { (topics: [[String: Any]]) in
+            CoreDataAPI.sharedInstance.save(topics)
+        }.done {
+            print("Done loading local data.")
+            expectation.fulfill()
+        }.catch { error in
+            print("\(error)")
+            XCTFail()
+        }
+        
+        self.waitForExpectations(timeout: 10.0, handler: nil)
+    }
 
+//    func testTopicsModel() {
+//        let viewModel = TopicsViewModel()
+//
+//        viewModel.fetchData()
+//        XCTAssert(!viewModel.isEmpty())
+//
+//        for i in 0...viewModel.numberOfSections() - 1{
+//            print("section \(i) : row \(viewModel.numberOfRows(inSection: i))")
+//        }
+//    }
 }

@@ -9,10 +9,6 @@
 import Sync
 import PromiseKit
 
-//enum Notifications {
-//    static let JSON2CoreDataDone = "JSON2CoreDataDone"
-//}
-
 /*
  * Singleton class to handle Core Data operations
  */
@@ -58,6 +54,9 @@ class CoreDataAPI: NSObject {
         }
     }
     
+    /*
+     * Save JSON to Core Data
+     */
     func save(_ topics: [[String: Any]]) -> Promise<Void> {
         return Promise { seal  in
             let notifName = NSNotification.Name.NSManagedObjectContextObjectsDidChange

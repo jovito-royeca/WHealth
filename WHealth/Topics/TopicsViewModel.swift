@@ -23,7 +23,7 @@ class TopicsViewModel: NSObject {
     func numberOfRows(inSection section: Int) -> Int {
         guard let fetchedResultsController = _fetchedResultsController,
             let sections = fetchedResultsController.sections else {
-                return 0
+            return 0
         }
         
         return sections[section].numberOfObjects
@@ -32,7 +32,7 @@ class TopicsViewModel: NSObject {
     func numberOfSections() -> Int {
         guard let fetchedResultsController = _fetchedResultsController,
             let sections = fetchedResultsController.sections else {
-                return 0
+            return 0
         }
         
         return sections.count
@@ -58,7 +58,7 @@ class TopicsViewModel: NSObject {
     func titleForHeaderInSection(section: Int) -> String? {
         guard let fetchedResultsController = _fetchedResultsController,
             let sections = fetchedResultsController.sections else {
-                return nil
+            return nil
         }
         
         return sections[section].name
@@ -86,6 +86,9 @@ class TopicsViewModel: NSObject {
         return objects.count == 0
     }
     
+    /*
+     * Fetches data from SQLite. Note that queryString matches data to fetch
+     */
     func fetchData() {
         let request: NSFetchRequest<Topic> = Topic.fetchRequest()
         let count = queryString.count
@@ -146,6 +149,7 @@ class TopicsViewModel: NSObject {
         
         _sectionIndexTitles = [String]()
         _sectionTitles = [String]()
+        
         
         for topic in topics {
             if let nameSection = topic.nameSection {
