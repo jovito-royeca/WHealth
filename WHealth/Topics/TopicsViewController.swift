@@ -39,10 +39,10 @@ class TopicsViewController: UIViewController {
         if segue.identifier == "showTopicDetails" {
             guard let dest = segue.destination as? TopicViewController,
                 let topic = sender as? Topic else {
-                    return
+                return
             }
 
-//            dest.viewModel = DetailsViewModel(withCompany: company)
+            dest.viewModel = TopicViewModel(withTopic: topic)
         }
     }
     

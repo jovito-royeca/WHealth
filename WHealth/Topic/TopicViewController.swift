@@ -9,11 +9,22 @@
 import UIKit
 
 class TopicViewController: UIViewController {
-
+    // MARL: Variables
+    var viewModel: TopicViewModel!
+    
+    // MARK: Outlets
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var aggregateCountLabel: UILabel!
+    @IBOutlet weak var styleLabel: UILabel!
+    
+    // MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        nameLabel.text = viewModel.nameDisplay()
+        aggregateCountLabel.text = viewModel.aggregateCountDisplay()
+        styleLabel.text = viewModel.styleDisplay()
     }
     
 
